@@ -1,2 +1,2 @@
 # sprintlite
-Agile well
+All's well when you Agile well
