@@ -92,6 +92,11 @@ export const Sprint = () => {
     }
 
     useEffect(() => {
+        globalAuth.onAuthStateChanged(user => {
+            if (!user) {
+              navigate("/login");
+            }
+        });
         if (!isLoaded) {
             getSprintInfo();
             getTasksForSprint();

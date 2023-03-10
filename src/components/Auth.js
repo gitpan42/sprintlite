@@ -17,9 +17,29 @@ export const Auth = () => {
             console.error(e);
         }
     }
-    return (<div>
-        <input placeholder="email" onChange={(e)=>setEmail(e.target.value)}/>
-        <input placeholder="password" type="password" onChange={(e)=>setPassword(e.target.value)} />
-        <button onClick={signIn}>Sign in</button>
-    </div>)
+    return (<>
+    <div className="flex flex-row">
+        <div className=" flex flex-col justify-self-center bg-white border-red-900 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-80">
+            <div className="mb-4 w-80">
+                <label className="block text-gray-700 text-sm font-bold mb-2">
+                    Username 
+                </label> 
+                <input  className="border-x-2 border-y-2" onChange={(e)=>setEmail(e.target.value)} />
+            </div>
+            <div className="mb-4 w-80">
+                <label className="block text-gray-700 text-sm font-bold mb-2">
+                    Password 
+                </label> 
+                <input type="password" className="border-x-2 border-y-2" onChange={(e)=>setPassword(e.target.value)} />
+                
+            </div>
+            <div className="mb-4 w-80 justify-center">
+            <button onClick={signIn}>Sign in</button>    
+            </div>
+            
+        </div>
+    <   div className=" flex-auto"></div>
+    </div>
+    </>)
+   
 }

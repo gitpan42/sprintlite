@@ -6,6 +6,7 @@ export const Sidebar = () =>{
                 <div className="order-2 h-12 px-5"><a href="/sprints">Sprints</a></div>
                 <div className="order-3 h-12 px-5"><a href="/tasks">Tasks</a></div>
                 <div className="order-3 h-12 px-5 flex-auto"></div>
+                <div className="order-4 h-12 px-5"><a href="/logout">Logout</a></div>
         </div>
     )
 }

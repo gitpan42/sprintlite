@@ -80,8 +80,16 @@ export const Task = () => {
             }
         
     }
+
+    
     
     useEffect(() => {
+
+        globalAuth.onAuthStateChanged(user => {
+            if (!user) {
+              navigate("/login");
+            }
+        });
         getRelatedData();
         console.log('in use effect');
         if (task_id != "new") {
